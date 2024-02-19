@@ -40,16 +40,31 @@ def condition_number(A):
 
     return cond
 
-
 if __name__ == '__main__':
-    A = np.array([[2, 1.7, -2.5],
-                  [1.24, -2, -0.5],
-                  [3, 0.2, 1]])
+    A = np.array([[-1, -2, 5],
+                  [4, -1, 1],
+                  [1, 6, 2]])
     cond = condition_number(A)
+
+    value = norm(A) + 2  # Adding the question number 2
+
+    print("\nMax Norm of A:", norm(A), "\n")
+
+    # Print the value obtained by adding the norm of the matrix of coefficients with the question number
+    print("Value obtained by adding the norm of the matrix of coefficients with the question number:", value)
+
+
 
     print("\n condition number: ", cond)
 
+# Calculate the value by adding the norm of the matrix of coefficients with the question number
+    value = norm(A) + 2  # Adding the question number 2
 
+
+    print("\nMax Norm of A:", norm(A), "\n")
+
+    # Print the value obtained by adding the norm of the matrix of coefficients with the question number
+    print("Value obtained by adding the norm of the matrix of coefficients with the question number:", value)
 
 
 
