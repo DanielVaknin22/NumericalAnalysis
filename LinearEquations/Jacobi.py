@@ -31,6 +31,8 @@ def jacobi_iterative(A, b, X0, TOL=1e-16, N=200):
 
     if is_diagonally_dominant(A):
         print('Matrix is diagonally dominant - preforming jacobi algorithm\n')
+    else:
+        A, b = DominantDiagonalFix(A, b)
 
     print( "Iteration" + "\t\t\t".join([" {:>12}".format(var) for var in ["x{}".format(i) for i in range(1, len(A) + 1)]]))
     print("-----------------------------------------------------------------------------------------------")
@@ -57,9 +59,10 @@ def jacobi_iterative(A, b, X0, TOL=1e-16, N=200):
 
 
 if __name__ == "__main__":
-
     A = np.array([[4, 2, 0], [2, 10, 4], [0, 4, 5]])
     b = np.array([2, 6, 5])
+
+    print(f"Input matrix:\n {A}\nInput vector: {b}")
 
     x = np.zeros_like(b, dtype=np.double)
     solution = jacobi_iterative(A, b, x)
