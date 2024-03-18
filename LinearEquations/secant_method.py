@@ -17,9 +17,9 @@ def secant_method(f, x0, x1, TOL, N=50):
 
 
 if __name__ == '__main__':
-    f = lambda x: x**2 - 5*x +2
-    x0 = 80
-    x1 = 100
+    f = lambda x: ((6*x**3) + (1*x**2) + 2) / (2*x - 6)
+    x0 = -3
+    x1 = 0
     TOL = 1e-6
     N = 20
     roots = secant_method(f, x0, x1, TOL, N)
