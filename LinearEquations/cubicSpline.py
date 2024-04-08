@@ -86,8 +86,7 @@ class Spline:
         return q
 
 if __name__ == "__main__":
-        # Given points
-        points = [(0.35, -3.65), (0.4, -3), (0.55, -2.6), (0.65, 0.2), (0.7, 1.67)]
+        points = [(0, 0), (1, 0.8415), (2, 0.9093), (3, 0.1411), (4, -0.7568), (5, -0.9589), (6, -0.2794)]
 
         # Separate x and y coordinates
         xs = [point[0] for point in points]
@@ -96,8 +95,7 @@ if __name__ == "__main__":
         # Create a spline
         spline = Spline(xs, ys)
 
-        # Interpolated values at x=0.45 and x=0.6
-        x_values = [0.45, 0.6]
+        x_values = [1.28]
         for x_val in x_values:
             interpolated_value = spline.at(x_val)
             print(f"f({x_val}) = {interpolated_value}")
