@@ -49,8 +49,8 @@ def gauss_seidel_method(coefficients, constants, max_iterations=1000, tolerance=
 
 
 def main():
-    coefficients = np.array([[4, 2, 0], [2, 10, 4], [0, 4, 5]], dtype=float)
-    constants = np.array([2, 6, 5], dtype=float)
+    coefficients = np.array([[4, -1, 0], [2, 5, -1], [1, 1, 10]], dtype=float)
+    constants = np.array([7, 15, -3], dtype=float)
 
     print("Using Jacobi Method:")
     jacobi_solution = jacobi_method(coefficients, constants)

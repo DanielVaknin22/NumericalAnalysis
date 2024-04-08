@@ -59,8 +59,8 @@ def jacobi_iterative(A, b, X0, TOL=1e-16, N=200):
 
 
 if __name__ == "__main__":
-    A = np.array([[4, 2, 0], [2, 10, 4], [0, 4, 5]])
-    b = np.array([2, 6, 5])
+    A = np.array([[4, -1, 0], [2, 5, -1], [1, 1, 10]])
+    b = np.array([7, 15, -3])
 
     print(f"Input matrix:\n {A}\nInput vector: {b}")
 
